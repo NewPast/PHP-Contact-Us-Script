@@ -31,7 +31,12 @@ who do not know PHP and to the beginners of PHP.
 
 Using the Code
 --------------
-Upload the *script* folder to your www root directory.
+* Unzip the downloaded zip file
+* Create the contact-us folder in the www directory of your website
+* Upload the files to the contact-us folder
+* That is all
+* The contact-us URL is like example.com/contact-us replace example.com with your domain
+## About the contact-us code
 ### From Action
 ``` {lang="html" data-lang-orig="html"}
 <form action="contact2us/send.php" method="POST">
