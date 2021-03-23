@@ -1,0 +1,215 @@
+﻿@media (max-width: 599px){
+    sidebar{
+    display: none;
+        width: 1px;
+    }   
+    .content{
+        flex: 1;
+        
+    }
+    nav, nav a{
+        font-size: 4vw;
+    }
+}
+@media (min-width:600px) and (max-width: 799px){
+    #sidebar1 {
+        display: none;
+    }
+    #sidebar2{
+            flex: 1;
+    }
+    .content{
+        width: 500px;
+    }
+}
+@media (min-width: 800px){
+    sidebar{
+            flex: 1;
+    }
+    .content{
+        width: 600px;
+    }
+}
+
+.content{
+    max-width:600px;
+    width: 67%;
+    margin-right: 20px;
+}
+.separator{
+    height: 70px;
+}
+* {
+    color: white;
+    outline: none;
+    font-size: 22px;
+}
+body {
+    padding: 0pt;
+    background-color: rgba(96, 96, 96, 0.50);
+    text-align: center;
+}
+
+article {
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(40, 50, 55, 1.0);
+    text-align: left;    
+    border-radius: 2px 20px;
+    box-shadow: 5px 5px 10px #4F4F4F, -5px -5px 10px #E0F0F0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.bottomlink a {
+    margin: 10px 20px 0;
+}
+a {
+    text-decoration: none;
+    color: rgba(200, 200, 100, 1.00);
+    font-weight: bold;
+    margin-top: 20px;
+}
+.input {
+    background-color: rgba(60, 70, 75, 1.00);
+    border: none;
+    border-radius: 0 8px;
+    margin-top: 5pt;
+    padding: 2px 3pt;
+    min-width: 100pt !important;
+    width: 170pt;
+    box-shadow: inset 1px 1px 5px #5D5E61, inset -1px -1px 5px #A9A9A9;
+}
+h1, h3, h4 {
+    color: white;
+}
+h3, .h2 {
+    display: inline-block;
+}
+h3, .h2 {
+    margin: 0;
+    margin-left: 10px;
+    width: 220px;
+    line-heighnt: 150%;
+}
+h1, h2 {
+    font-weight: bold;
+    margin: 0pt;
+    overflow: visible;
+    padding: 0pt;
+    text-align: center;
+    color: white;
+}
+h4 {
+    display: block;
+    float: left;
+}
+div.h2 {
+    display: inline-block;
+    display: inline-flex;
+    width: 220pt;
+    /*	flex-direction: row;
+
+	border-collapse: collapse;*/
+    justify-content: space-between;
+}
+hr {
+    border: 1px grey solid;
+}
+section {
+    display: inline-block;
+    margin-left: 5pt;
+    color: orange;
+}
+section sub {
+    color: white;
+}
+button {
+    display: inline-block;
+    margin-bottom: 10px;
+    outline: none;
+    color: white;
+    border-width: 3px;
+    border-radius: 14px;
+    border-style: outset; /*inset;*/
+    border-color: #9c9c9c;
+    box-shadow: 5px 5px 5px #888888;
+    background-color: transparent;
+    background:
+        radial-gradient(at 0 -15%, rgba(#fff, .07) 70%, rgba(#fff, 0) 71%) 0 0/ 80% 90% no-repeat content-box, linear-gradient(#4e4e4e, #040404) content-box, linear-gradient(#292929, #010101) border-box;
+    filter: contrast(.65);
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+button:hover, button:focus {
+    outline: none;
+    filter: none;
+}
+button:active {
+    transform: translatey(0.5em);
+}
+button:disabled {
+    /*color: chocolate;*/
+}
+#Percents {
+    text-align: center;
+}
+#Percents div {
+    display: inline-block;
+    border: 2px solid rgba(199, 224, 123, 1.00);
+    padding-left: 3pt;
+    padding-right: 3pt;
+    margin-left: 3pt;
+    margin-right: 3pt;
+    border-radius: 8px 1px;
+}
+#Percents div:first-child {
+    border-radius: 1px 8px;
+}
+table {
+    margin: 0;
+}
+#main {
+    /*overflow-x:hidden;*/
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+td {
+    vertical-align: top;
+}
+sidebar {
+    top : 100px;
+    color: black;
+    text-align: center;
+    background-color: wheat;    
+}
+.td-calculator {
+    /*min-width: 370pt;*/
+    width: 370pt;
+}
+td {
+    padding: 0pt;
+    margin: 0;
+}
+/*
+#definition, #about {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(40, 50, 55, 1.0);
+    border-radius: 2px 20px;
+    width: 90%;
+    box-shadow: 5px 5px 10px #4F4F4F, -5px -5px 10px #E0F0F0;
+}
+#definition div, #about div {
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-family: "serif", Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman";
+    font-weight: 600;
+    color: white;
+}
+*/
