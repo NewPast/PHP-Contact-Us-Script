@@ -39,7 +39,7 @@ Using the Code
 ## About the contact-us code
 ### From Action
 ``` {lang="html" data-lang-orig="html"}
-<form action="contact2us/send.php" method="POST">
+<form action="send.php" method="POST">
 ```
 ### Fields Names
 Use `from_email`, `from_name`, `subject`, `message` and `captcha` as
