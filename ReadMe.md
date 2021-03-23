@@ -1,16 +1,19 @@
 A PHP script uses to send contact-us form data to the webmaster, It is
 simple and runs without modification
+
 PHP Contact Us Script Downloads
 -------------------------------
 ### ♦ [Direct download of PHP Contact Us Script](https://www.miniindustry.com/a/downloads/contact2us.zip)
 ### ♦ [PHP Contact Us Script on CodeProject](https://www.codeproject.com/KB/PHP/1139299.aspx)
 ### ♦ [Get it from GitHub](https://github.com/NewPast/PHP-Contact-Us-Script)
+
 Introduction
 ------------
 Run out of box PHP contact us script, it does not need modification, it
 will detect the domain and send an email containing the contact message
 to info@exmple.com whatever fields are in your form; it will detect them
 and send the form data with email.
+
 System requirements
 -------------------
 A website with hosting with PHP
@@ -18,12 +21,14 @@ A website with hosting with PHP
 PHP 5.6, PHP 7.0, PHP 7.1, PHP 7.2, PHP 7.3, PHP 7.4 or PHP 8.0
 ### Keywords
 HTML, PHP, web, web-hosting, website, script, code, contact us
+
 Background
 ----------
 Lots of contact us scripts are available over the internet. Other
 scripts need modification of the PHP file before use while this script
 will run directly out of the box. This script is very useful to those
 who do not know PHP and to the beginners of PHP.
+
 Using the Code
 --------------
 Upload the *script* folder to your www root directory.
@@ -53,6 +58,7 @@ name="captcha" type="text"><br>
 ```
 ### Thank you URL
 Put your own `$thank_you_url` in the 2^nd^ line of the code.
+
 What Does This Script Do?
 -------------------------
 *   Check the referrer page and stop the script if it is called
@@ -95,11 +101,13 @@ What Does This Script Do?
     ``` {lang="php" data-lang-orig="php"}
     header('Location: '. $thank_you_url);
     ```
+ 
 PHP Mailing Technique
 ---------------------
 There are lots of mailing techniques in PHP; PEAR Mail, PHP Mailer, and
 a mail function. However, we just use the mail function as it is common
 and simple.
+
 PHP Email Validation
 --------------------
 ### PHP FILTER\_SANITIZE\_EMAIL Filter
@@ -121,6 +129,7 @@ if(!preg_match($pattern, $from_email)){
     $from_email = "web_page@$domain";
 }
 ```
+
 What is the Next Step?
 ----------------------
 Setting the max email could be sent for a single IP per hour. If you
