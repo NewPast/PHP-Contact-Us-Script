@@ -112,20 +112,18 @@ PHP Email Validation
 --------------------
 ### PHP FILTER\_SANITIZE\_EMAIL Filter
 Remove all illegal characters from an email address:
-    ``` {lang="php" data-lang-orig="php"}
+    ```
     $from_email = filter_var($from_email, FILTER_SANITIZE_EMAIL);
     ```
 ### PHP FILTER\_VALIDATE\_EMAIL Filter
 Check if the variable \$email is a valid email address:
-
-    ``` {lang="php" data-lang-orig="php"}
+    ```{lang="php" data-lang-orig="php"}
     if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {                    
         $Err .= 'Invalid email format<br>';               
         $from_email = "web_page@$domain";
     }
     ```
 ### Validate Email in PHP using a regular expression:
-
     ``` {lang="php" data-lang-orig="php"}
     $pattern = '/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/';
     if(!preg_match($pattern, $from_email)){ 
