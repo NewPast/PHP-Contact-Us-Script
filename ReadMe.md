@@ -56,7 +56,7 @@ $captcha = true;
 ```
 To use captcha, include the following in your form:
 ``` {lang="php" data-lang-orig="php"}
-<img src="contact2us/captcha_code_file.php?rand=<?php echo rand(); 
+<img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' ><br>
 Enter the code above here : <input id="captcha" 
 name="captcha" type="text"><br>
