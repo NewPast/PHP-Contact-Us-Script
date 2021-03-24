@@ -16,7 +16,8 @@ and send the form data with email.
 
 System requirements
 -------------------
-A website with hosting with PHP
+* A website with hosting support PHP; Almost all hosts do support it.
+* You could use it for any website regardless of what it uses: pure Html/PHP, WordPress, Joomla, Drupal, or any other system 
 ### PHP Version
 PHP 5.6, PHP 7.0, PHP 7.1, PHP 7.2, PHP 7.3, PHP 7.4 or PHP 8.0
 ### Keywords
@@ -36,6 +37,12 @@ Using the Code
 * Upload the files to the contact-us folder
 * That is all
 * The contact-us URL is like example.com/contact-us replace example.com with your domain
+### Modifying contact-us form design
+* You could modify the contact us page design as you want,
+* Add or omit fields as needed
+* Use from_email, from_name, subject, message and captcha as fields names
+* Put your own Ads or make your form free of ads
+* You are free to put a link to us or not. 
 ## About the contact-us code
 ### From Action
 ``` {lang="html" data-lang-orig="html"}
