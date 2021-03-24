@@ -5,7 +5,7 @@ PHP Contact Us Script Links and Downloads
 -------------------------------
 ### ♦ [Read PHP Contact Us Script on our blog](https://www.miniindustry.com/d/php-contact-us-script)
 ### ♦ [PHP Contact Us Script on CodeProject](https://www.codeproject.com/KB/PHP/1139299.aspx)
-### ♦ [Get it from GitHub](https://github.com/NewPast/PHP-Contact-Us-Script)
+### ♦ [GitHub Link](https://github.com/NewPast/PHP-Contact-Us-Script)
 
 Introduction
 ------------
