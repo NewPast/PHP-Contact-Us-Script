@@ -1,9 +1,9 @@
 A PHP script uses to send contact-us form data to the webmaster, It is
 simple and runs without modification
 
-PHP Contact Us Script Downloads
+PHP Contact Us Script Links and Downloads
 -------------------------------
-### ♦ [Download of PHP Contact Us Script](https://www.miniindustry.com/d/php-contact-us-script)
+### ♦ [Read PHP Contact Us Script on our blog](https://www.miniindustry.com/d/php-contact-us-script)
 ### ♦ [PHP Contact Us Script on CodeProject](https://www.codeproject.com/KB/PHP/1139299.aspx)
 ### ♦ [Get it from GitHub](https://github.com/NewPast/PHP-Contact-Us-Script)
 
