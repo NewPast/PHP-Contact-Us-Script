@@ -4,6 +4,7 @@ simple and runs without modification
 PHP Contact Us Script Links and Downloads
 -------------------------------
 ### ♦ [Read PHP Contact Us Script on our blog](https://www.miniindustry.com/d/php-contact-us-script)
+### ♦ [Arabic version of this article](https://www.miniindustry.com/d/ar-php-contact-us-script)
 ### ♦ [PHP Contact Us Script on CodeProject](https://www.codeproject.com/KB/PHP/1139299.aspx)
 ### ♦ [GitHub Link](https://github.com/NewPast/PHP-Contact-Us-Script)
 
