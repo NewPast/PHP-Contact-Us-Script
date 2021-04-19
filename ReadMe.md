@@ -101,8 +101,15 @@ What Does This Script Do?
 *   Store captcha in session and compare it with variable
 *   Seek all posted variables
     ``` {lang="php" data-lang-orig="php"}
-    foreach ($_POST as $key => $value)
-    {
+    foreach ($_POST as $key => $value) {
+        if ( strpos( strtolower( $key ), 'email' ) !== false ) {
+            $value = filter_var( $value, FILTER_SANITIZE_EMAIL );
+        } else {
+            $value = filter_var( $value, FILTER_SANITIZE_STRING );
+        }
+        $value = htmlspecialchars( $value );
+        $key = filter_var( $key, FILTER_SANITIZE_STRING );
+        $key = htmlspecialchars( $key );
         $value = htmlspecialchars($value);
         $message_html .= "<h2>$key</h2><p>$value</p>";
     }
