@@ -118,23 +118,23 @@ p, p a {
             <p>Try other styles: <a href="index.php">[1]</a> <a href="contact-us-2.php">[2]</a> [3]</p>
             <p>
                 <label>Name: </label>
-                <input type="text" name="from_name" />
+                <input type="text" required minlength="4" maxlength="30" name="from_name" />
             </p>
             <p>
                 <label>Email: </label>
-                <input type="text" name="from_email"/>
+                <input type="text" required minlength="10" maxlength="30" name="from_email"/>
             </p>            
             <p>
                 <label>Subject: </label>
-                <input type="text" name="subject"/>
+                <input type="text" required minlength="4" maxlength="100"  name="subject"/>
             </p>
             <p>
                 <label>Message: </label>
-                <textarea name="message"></textarea>
+                <textarea required minlength="10" name="message"  maxlength="1000" ></textarea>
             </p>
             <p>
                 <label for="captcha">captcha</label>
-                <input type="text" name="captcha" />
+                <input type="text" required minlength="6" maxlength="6" name="captcha" />
                 <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' > </p>
             <p class="wipeout">

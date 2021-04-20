@@ -199,17 +199,17 @@ p, p a {
                 <li>
                     <p class="left">
                         <label for="from_name">first name</label>
-                        <input type="text" name="from_name" placeholder="first name" />
+                        <input type="text" required minlength="2"  maxlength="30" name="from_name" placeholder="first name" />
                     </p>
                     <p class="pull-right">
                         <label for="last_name">last name</label>
-                        <input type="text" name="last_name" placeholder="last name" />
+                        <input type="text" required minlength="2"  maxlength="30" name="last_name" placeholder="last name" />
                     </p>
                 </li>
                 <li>
                     <p>
-                        <label for="from_email">email <span class="req">*</span></label>
-                        <input type="email" name="from_email" placeholder="email" />
+                        <label for="from_email">email</label>
+                        <input type="email" required minlength="10"  maxlength="30" name="from_email" placeholder="email" />
                     </p>
                 </li>
                 <li>
@@ -217,14 +217,14 @@ p, p a {
                 </li>
                 <li>
                     <label for="message">comments</label>
-                    <textarea cols="46" rows="3" name="message"></textarea>
+                    <textarea required minlength="10"  maxlength="1000" cols="46" rows="3" name="message"></textarea>
                 </li>
                 <li>
                     <div class="divider"></div>
                 </li>
                 <li>
                     <label for="captcha">captcha</label>
-                    <input type="text" name="captcha" />
+                    <input required minlength="6"  maxlength="6" type="text" name="captcha" />
                     <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' > </li>
                 <li>

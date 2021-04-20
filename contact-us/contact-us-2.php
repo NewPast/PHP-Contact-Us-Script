@@ -108,16 +108,15 @@ p {
      <p>Try other styles:
             <a href="index.php">[1]</a> [2] <a href="contact-us-3.php">[3]</a></p>
     <div class="half left cf">
-        <input type="text" id="input-name" name="from_name" placeholder="Name">
-        <input type="email" id="input-email" name="from_email" placeholder="Email address">
-        <input type="text" id="input-subject" name="subject" placeholder="Subject">
-        <input type="text" name="captcha" placeholder="captcha"/>
+        <input type="text" required minlength="4"  maxlength="30" id="input-name" name="from_name" placeholder="Name">
+        <input type="email" required minlength="10"  maxlength="30" id="input-email" name="from_email" placeholder="Email address">
+        <input type="text" minlength="4" required  maxlength="100" id="input-subject" name="subject" placeholder="Subject">
+        <input type="text" required minlength="6"  maxlength="6" name="captcha" placeholder="captcha"/>
         <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' > 
     </div>
     <div class="half right cf">
-        <textarea name="message" type="text" id="input-message" name="message" placeholder="Message">
-        </textarea>
+        <textarea required minlength="10"  maxlength="1000"  name="message" type="text" id="input-message" name="message" placeholder="Message"></textarea>
     </div>    
     <input type="submit" value="Submit" name="submit" id="input-submit">
 </form>

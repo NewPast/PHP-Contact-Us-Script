@@ -101,7 +101,8 @@ if ( $captcha ) {
         //Note: the captcha code is compared case insensitively.
         //if you want case sensitive match, update the check above to
         // strcmp()
-        die( "The captcha code does not match!<br>" );
+        header('Location: tray-again.php');
+        exit;
     }
 }
 $headers = '';

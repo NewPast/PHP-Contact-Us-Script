@@ -4,7 +4,7 @@ include 'ad.php';
 <!DOCTYPE HTML> 
 <html>
 <head>
-	<title>Thank you!</title>
+	<title>Try again!</title>
     <style>
         img {
             width: 50%;
@@ -15,13 +15,17 @@ include 'ad.php';
         }
         body{
             text-align: center;
+            font-size: 24px;
+            color:red;
         }
     </style>
 </head>
 <body>
-<?php ad_body_open(); ?>    
-<img src="thank-you-your-feedback.jpg" alt="thank you" />
-<p><a href='/'>[ Home ]</a> <a href="https://www.miniindustry.com/d/php-contact-us-script">[ PHP Contact US Script ]</a></p>
+<?php ad_body_open(); ?> 
+<br>
+<p>
+Try again:<br> The captcha code does not match!<br>
+<a href="/">[Home]</a> <a href="./">[Contact Us]</a></p>
 <?php
 ad_body_open();
 np_ad();
