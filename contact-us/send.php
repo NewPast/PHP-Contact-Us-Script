@@ -1,13 +1,11 @@
 <?php
-$captcha = true;
-$thank_you_url = "thank-you.php";
-$to = '';
 /*
 Run out of box PHP contact us script 
 Download
 --------
 https://www.miniindustry.com/d/php-contact-us-script
 */
+include 'config.php';
 function np_filter_input( string $key ) {
     if ( !$key ) return '';
 

@@ -1,4 +1,5 @@
 <?php
+include 'config.php';
 include 'ad.php';
 ?>
 <!DOCTYPE html>
@@ -132,11 +133,13 @@ p, p a {
                 <label>Message: </label>
                 <textarea required minlength="10" name="message"  maxlength="1000" ></textarea>
             </p>
+            <?php if($captcha) { ?>
             <p>
                 <label for="captcha">captcha</label>
                 <input type="text" required minlength="6" maxlength="6" name="captcha" />
                 <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' > </p>
+            <?php } ?>
             <p class="wipeout">
                 <input type="submit" name="submit" value="Send" />
             </p>

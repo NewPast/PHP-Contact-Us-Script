@@ -1,4 +1,5 @@
 <?php
+include 'config.php';
 include 'ad.php';
 ?>
 <!DOCTYPE html>
@@ -111,9 +112,11 @@ p {
         <input type="text" required minlength="4"  maxlength="30" id="input-name" name="from_name" placeholder="Name">
         <input type="email" required minlength="10"  maxlength="30" id="input-email" name="from_email" placeholder="Email address">
         <input type="text" minlength="4" required  maxlength="100" id="input-subject" name="subject" placeholder="Subject">
+        <?php if($captcha) { ?>
         <input type="text" required minlength="6"  maxlength="6" name="captcha" placeholder="captcha"/>
         <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' > 
+        <?php } ?>
     </div>
     <div class="half right cf">
         <textarea required minlength="10"  maxlength="1000"  name="message" type="text" id="input-message" name="message" placeholder="Message"></textarea>

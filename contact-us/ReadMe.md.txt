@@ -1,11 +1,12 @@
 A PHP script uses to send contact-us form data to the webmaster, It is
 simple and runs without modification
 
-PHP Contact Us Script Downloads
+PHP Contact Us Script Links and Downloads
 -------------------------------
-### ♦ [Download of PHP Contact Us Script](https://www.miniindustry.com/d/php-contact-us-script)
+### ♦ [Read PHP Contact Us Script on our blog](https://www.miniindustry.com/d/php-contact-us-script)
+### ♦ [Arabic version of this article](https://www.miniindustry.com/d/ar-php-contact-us-script)
 ### ♦ [PHP Contact Us Script on CodeProject](https://www.codeproject.com/KB/PHP/1139299.aspx)
-### ♦ [Get it from GitHub](https://github.com/NewPast/PHP-Contact-Us-Script)
+### ♦ [GitHub Link](https://github.com/NewPast/PHP-Contact-Us-Script)
 
 Introduction
 ------------
@@ -16,7 +17,8 @@ and send the form data with email.
 
 System requirements
 -------------------
-A website with hosting with PHP
+* A website with hosting support PHP; Almost all hosts do support it.
+* You could use it for any website regardless of what it uses: pure Html/PHP, WordPress, Joomla, Drupal, or any other system 
 ### PHP Version
 PHP 5.6, PHP 7.0, PHP 7.1, PHP 7.2, PHP 7.3, PHP 7.4 or PHP 8.0
 ### Keywords
@@ -31,27 +33,37 @@ who do not know PHP and to the beginners of PHP.
 
 Using the Code
 --------------
-Upload the *script* folder to your www root directory.
+* Unzip the downloaded zip file
+* Create the contact-us folder in the www directory of your website
+* Upload the files to the contact-us folder
+* That is all
+* The contact-us URL is like example.com/contact-us replace example.com with your domain
+### Modifying contact-us form design
+* You could modify the contact us page design as you want,
+* Add or omit fields as needed
+* Use from_email, from_name, subject, message and captcha as fields names
+* Put your own Ads or make your form free of ads
+* You are free to put a link to us or not. 
+## About the contact-us code
 ### From Action
-``` {lang="html" data-lang-orig="html"}
-<form action="contact2us/send.php" method="POST">
+```html
+<form action="send.php" method="POST">
 ```
 ### Fields Names
 Use `from_email`, `from_name`, `subject`, `message` and `captcha` as
 main fields' names in your form.
 ### Captcha
-If you don't wish to use captcha, then no change is needed and the 1^st^
-line of code will be:
-``` {lang="php" data-lang-orig="php"}
+If you don’t wish to use captcha, then change the 1st line of the ‘config.php’ code to be:
+```php
 $captcha = false;
 ```
-If you wish to use captcha, then change the 1^st^ line of code to be:
-``` {lang="php" data-lang-orig="php"}
+If you wish to use captcha, then no change is needed and the 1st line of the ‘config.php’ code will be:
+```php
 $captcha = true;
 ```
-To use captcha, include the following in your form:
-``` {lang="php" data-lang-orig="php"}
-<img src="contact2us/captcha_code_file.php?rand=<?php echo rand(); 
+If you need to modify the form; please note that we use captcha, include the following in your form:
+```html
+<img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' ><br>
 Enter the code above here : <input id="captcha" 
 name="captcha" type="text"><br>
@@ -64,7 +76,7 @@ What Does This Script Do?
 *   Check the referrer page and stop the script if it is called
     directly:
 
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     $REFERER = $_SERVER['HTTP_REFERER'];
     if(!preg_match("@^http:\/\/(www\.)?$domain\/@",$REFERER)){
                     die("This page can't be call directly");
@@ -73,7 +85,7 @@ What Does This Script Do?
 *   Validate user email and user name to prevent injecting the wrong
     command in the header parameter of the mail function:
 
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     if(!$from_email) $from_email = "web_page@$domain";
     if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
                     $Err .= 'Invalid email format<br>';
@@ -81,16 +93,23 @@ What Does This Script Do?
     }
     ```
 *   Validate subject and encode it if needed to prevent send failure:
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     if ($subject && !preg_match('/^[A-Za-z ]+$/',$subject)){
                     $subject = "=?UTF-8?B?".base64_encode($subject)."?=";
     }
     ```
 *   Store captcha in session and compare it with variable
 *   Seek all posted variables
-    ``` {lang="php" data-lang-orig="php"}
-    foreach ($_POST as $key => $value)
-    {
+    ```php
+    foreach ($_POST as $key => $value) {
+        if ( strpos( strtolower( $key ), 'email' ) !== false ) {
+            $value = filter_var( $value, FILTER_SANITIZE_EMAIL );
+        } else {
+            $value = filter_var( $value, FILTER_SANITIZE_STRING );
+        }
+        $value = htmlspecialchars( $value );
+        $key = filter_var( $key, FILTER_SANITIZE_STRING );
+        $key = htmlspecialchars( $key );
         $value = htmlspecialchars($value);
         $message_html .= "<h2>$key</h2><p>$value</p>";
     }
@@ -98,7 +117,7 @@ What Does This Script Do?
 *   Send the message in Html UTF-8 format to be compatible with most
     languages
 *   Redirect to thank you URL
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     header('Location: '. $thank_you_url);
     ```
  
@@ -113,28 +132,23 @@ PHP Email Validation
 ### PHP FILTER\_SANITIZE\_EMAIL Filter
 Remove all illegal characters from an email address
 
-``` {lang="php" data-lang-orig="php"}
+```php
 $from_email = filter_var($from_email, FILTER_SANITIZE_EMAIL);
 ```
 ### PHP FILTER\_VALIDATE\_EMAIL Filter
 Check if the variable \$email is a valid email address
 
-``` {lang="php" data-lang-orig="php"}
-if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {                    
-    $Err .= 'Invalid email format<br>';               
+```php
+if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {                    
+    $Err .= 'Invalid email format<br>';               
     $from_email = "web_page@$domain";
 }
 ```
 ### Validate Email in PHP using a regular expression:
-``` {lang="php" data-lang-orig="php"}
+```php
 $pattern = '/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/';
 if(!preg_match($pattern, $from_email)){ 
-    $Err .= 'Invalid email format<br>';               
+    $Err .= 'Invalid email format<br>';               
     $from_email = "web_page@$domain";
 }
 ```
-What is the Next Step?
-----------------------
-Setting the max email could be sent for a single IP per hour. If you
-have any suggestions for this section or to improve the script; please
-write it in the comments to be included in the next version.

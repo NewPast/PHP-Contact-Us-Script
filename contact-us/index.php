@@ -1,4 +1,5 @@
 <?php
+include 'config.php';
 include 'ad.php';
 ?>
 <!DOCTYPE html>
@@ -222,11 +223,13 @@ p, p a {
                 <li>
                     <div class="divider"></div>
                 </li>
+                <?php if($captcha) { ?>
                 <li>
                     <label for="captcha">captcha</label>
                     <input required minlength="6"  maxlength="6" type="text" name="captcha" />
                     <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' > </li>
+                <?php } ?>
                 <li>
                     <input class="btn btn-submit" type="submit" value="Submit" />
                     <small>or press <strong>enter</strong></small> </li>

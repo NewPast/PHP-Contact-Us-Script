@@ -1,5 +1,5 @@
 <?php
-include 'z-ad.php';
+if (file_exists('z-ad.php')) include 'z-ad.php';
 if ( !function_exists( 'np_is_amp' ) ) {
     if ( !function_exists( 'ad_head' ) ) {
         function ad_head() {}
