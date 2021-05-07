@@ -46,7 +46,7 @@ Using the Code
 * You are free to put a link to us or not. 
 ## About the contact-us code
 ### From Action
-``` {lang="html" data-lang-orig="html"}
+```html
 <form action="send.php" method="POST">
 ```
 ### Fields Names
