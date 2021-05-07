@@ -62,7 +62,7 @@ If you wish to use captcha, then no change is needed and the 1st line of the ‘
 $captcha = true;
 ```
 If you need to modify the form; please note that we use captcha, include the following in your form:
-``` {lang="php" data-lang-orig="php"}
+```php
 <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' ><br>
 Enter the code above here : <input id="captcha" 
@@ -76,7 +76,7 @@ What Does This Script Do?
 *   Check the referrer page and stop the script if it is called
     directly:
 
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     $REFERER = $_SERVER['HTTP_REFERER'];
     if(!preg_match("@^http:\/\/(www\.)?$domain\/@",$REFERER)){
                     die("This page can't be call directly");
@@ -85,7 +85,7 @@ What Does This Script Do?
 *   Validate user email and user name to prevent injecting the wrong
     command in the header parameter of the mail function:
 
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     if(!$from_email) $from_email = "web_page@$domain";
     if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
                     $Err .= 'Invalid email format<br>';
@@ -100,7 +100,7 @@ What Does This Script Do?
     ```
 *   Store captcha in session and compare it with variable
 *   Seek all posted variables
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     foreach ($_POST as $key => $value) {
         if ( strpos( strtolower( $key ), 'email' ) !== false ) {
             $value = filter_var( $value, FILTER_SANITIZE_EMAIL );
@@ -117,7 +117,7 @@ What Does This Script Do?
 *   Send the message in Html UTF-8 format to be compatible with most
     languages
 *   Redirect to thank you URL
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     header('Location: '. $thank_you_url);
     ```
  
@@ -132,20 +132,20 @@ PHP Email Validation
 ### PHP FILTER\_SANITIZE\_EMAIL Filter
 Remove all illegal characters from an email address
 
-``` {lang="php" data-lang-orig="php"}
+```php
 $from_email = filter_var($from_email, FILTER_SANITIZE_EMAIL);
 ```
 ### PHP FILTER\_VALIDATE\_EMAIL Filter
 Check if the variable \$email is a valid email address
 
-``` {lang="php" data-lang-orig="php"}
+```php
 if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {                    
     $Err .= 'Invalid email format<br>';               
     $from_email = "web_page@$domain";
 }
 ```
 ### Validate Email in PHP using a regular expression:
-``` {lang="php" data-lang-orig="php"}
+```php
 $pattern = '/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/';
 if(!preg_match($pattern, $from_email)){ 
     $Err .= 'Invalid email format<br>';               
