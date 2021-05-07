@@ -62,7 +62,7 @@ If you wish to use captcha, then no change is needed and the 1st line of the ‘
 $captcha = true;
 ```
 If you need to modify the form; please note that we use captcha, include the following in your form:
-```php
+```html
 <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' ><br>
 Enter the code above here : <input id="captcha" 
