@@ -93,7 +93,7 @@ What Does This Script Do?
     }
     ```
 *   Validate subject and encode it if needed to prevent send failure:
-    ``` {lang="php" data-lang-orig="php"}
+    ```php
     if ($subject && !preg_match('/^[A-Za-z ]+$/',$subject)){
                     $subject = "=?UTF-8?B?".base64_encode($subject)."?=";
     }
@@ -152,8 +152,3 @@ if(!preg_match($pattern, $from_email)){
     $from_email = "web_page@$domain";
 }
 ```
-What is the Next Step?
-----------------------
-Setting the max email could be sent for a single IP per hour. If you
-have any suggestions for this section or to improve the script; please
-write it in the comments to be included in the next version.
