@@ -53,11 +53,11 @@ Using the Code
 Use `from_email`, `from_name`, `subject`, `message` and `captcha` as
 main fields' names in your form.
 ### Captcha
-If you don’t wish to use captcha, then change the 1^st^ line of the ‘send.php’ code to be:
+If you don’t wish to use captcha, then change the 1st line of the ‘config.php’ code to be:
 ``` {lang="php" data-lang-orig="php"}
 $captcha = false;
 ```
-If you wish to use captcha, then no change is needed and the 1^st^ line of the ‘send.php’ code will be:
+If you wish to use captcha, then no change is needed and the 1st line of the ‘config.php’ code will be:
 ``` {lang="php" data-lang-orig="php"}
 $captcha = true;
 ```
