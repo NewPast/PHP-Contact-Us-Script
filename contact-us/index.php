@@ -6,7 +6,7 @@ include 'ad.php';
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
-<title>CONTACT US</title>
+<title>Contact us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <?php ad_head(); ?>
 <style>
@@ -208,9 +208,13 @@ p, p a {
                     </p>
                 </li>
                 <li>
-                    <p>
+                    <p class="left">
                         <label for="from_email">email</label>
                         <input type="email" required minlength="10"  maxlength="30" name="from_email" placeholder="email" />
+                    </p>
+                    <p class="pull-right">
+                        <label for="last_name">subject</label>
+                        <input type="text" required minlength="4"  maxlength="100" name="subject" placeholder="subject" />
                     </p>
                 </li>
                 <li>

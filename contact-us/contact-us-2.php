@@ -6,7 +6,7 @@ include 'ad.php';
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
-<title>Contact Us</title>
+<title>Contact Us Form</title>
 <?php ad_head(); ?>
 <style>
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
@@ -103,7 +103,7 @@ p {
 
 <body>
 <?php ad_body_open(); ?>
-<h1>Contact Us</h1>
+<h1>Contact Us Form</h1>
 <form class="cf" action="send.php" method="post">
     <?php np_ad(); ?>
      <p>Try other styles:

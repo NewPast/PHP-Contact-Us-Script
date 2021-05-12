@@ -6,7 +6,7 @@ include 'ad.php';
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
-<title>Contact Us</title>
+<title>Contact Us and Feedback</title>
 <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 <style>
 body {
@@ -35,15 +35,15 @@ body {
     background-image: radial-gradient( circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient( 215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient( circle at right, #111, rgba(51, 51, 51, 1));
     background-color: #333;
 }
-.blackboard:before {
+/*.blackboard:before,*/ h1 {
     box-sizing: border-box;
-    display: block;
+    /*display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100%;*/
     background-image: linear-gradient( 175deg, transparent, transparent 40px, rgba(120, 120, 120, 0.1) 100px, rgba(120, 120, 120, 0.1) 110px, transparent 220px, transparent), linear-gradient( 200deg, transparent 80%, rgba(50, 50, 50, 0.3)), radial-gradient( ellipse at right bottom, transparent, transparent 200px, rgba(80, 80, 80, 0.1) 260px, rgba(80, 80, 80, 0.1) 320px, transparent 400px, transparent);
     border: #2c2c2c solid 2px;
-    content: "Contact Us";
+    content: "";
     font-family: 'Permanent Marker', cursive;
     font-size: 2.2em;
     color: rgba(238, 238, 238, 0.7);
@@ -114,6 +114,7 @@ p, p a {
 <?php ad_body_open(); ?>
 <div class="shade">
     <div class="blackboard">
+        <h1>Contact Us and Feedback</h1>
         <form class="form" action="send.php" method="post">
             <?php np_ad(); ?>
             <p>Try other styles: <a href="index.php">[1]</a> <a href="contact-us-2.php">[2]</a> [3]</p>
