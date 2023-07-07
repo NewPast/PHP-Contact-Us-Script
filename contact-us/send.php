@@ -29,17 +29,6 @@ function np_filter_input( string $key ) {
     return filter_var( $value, $FILTER );    
 }
 //#####################################
-@ ini_set( 'log_errors', 'On' );
-$log_dir = __DIR__;
-if ( basename( $log_dir ) != 'public_html' ) {
-    $log_dir = dirname( $log_dir );
-}
-if ( basename( $log_dir ) != 'public_html' ) {
-    $log_dir = dirname( $log_dir );
-}
-@ ini_set( 'error_log', "$log_dir/error_log" );
-
-// No more settings
 $domain = '';
 @ $domain = str_replace( 'www.', '', $_SERVER[ 'HTTP_HOST' ] );
 if ( !$domain ) {
@@ -60,6 +49,10 @@ if ( !$from_name )$from_name =
     np_filter_input( 'first_name' ) . ' ' . np_filter_input( 'last_name' );
 
 $subject = np_filter_input( 'subject' );
+if (!$subject){
+    //die( "Please put a subject and try again" );
+    $subject = "Msg fom website";
+}
 $message = np_filter_input( 'message' );
 $cc = '';
 $bcc = '';
@@ -102,6 +95,7 @@ if ( $captcha ) {
         header('Location: tray-again.php');
         exit;
     }
+    $_SESSION[ 'captcha' ] = '';
 }
 $headers = '';
 if ( true ) { //html
@@ -157,6 +151,7 @@ foreach ( $_POST as $key => $value ) {
             } else {
                 $value = filter_var( $value, FILTER_SANITIZE_STRING );
             }
+            $value = strip_tags($value);
             $value = htmlspecialchars( $value );
             $key = filter_var( $key, FILTER_SANITIZE_STRING );
             $key = htmlspecialchars( $key );
@@ -181,7 +176,6 @@ if($de){
     exit;
 }
  
-
 mail( $to, $subject, $message_html, $headers );
 //Redirect to thank you URL
 header( 'Location: ' . $thank_you_url );
