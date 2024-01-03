@@ -1,35 +1,35 @@
-A PHP script uses to send contact-us form data to the webmaster, It is
+This PHP script is used to send contact-us form data to the webmaster, It is
 simple and runs without modification
 
 PHP Contact Us Script Links and Downloads
 -------------------------------
-### ♦ [Read PHP Contact Us Script on our blog](https://www.miniindustry.com/d/php-contact-us-script)
-### ♦ [Arabic version of this article](https://www.miniindustry.com/d/ar-php-contact-us-script)
+### ♦ [Read PHP Contact Us Script on our blog](https://www.miniindustry.com/d/newpast/post/simple-php-contact-form-script)
+### ♦ [Arabic version of this article](https://www.miniindustry.com/d/ar/newpast/post/كود-اتصل-بنا-php-html)
 ### ♦ [PHP Contact Us Script on CodeProject](https://www.codeproject.com/KB/PHP/1139299.aspx)
 ### ♦ [GitHub Link](https://github.com/NewPast/PHP-Contact-Us-Script)
 
 Introduction
 ------------
-Run out of box PHP contact us script, it does not need modification, it
+Run out-of-box PHP contact-us script, it does not need modification, it
 will detect the domain and send an email containing the contact message
 to info@exmple.com whatever fields are in your form; it will detect them
-and send the form data with email.
+and send the form data by email.
 
 System requirements
 -------------------
 * A website with hosting support PHP; Almost all hosts do support it.
-* You could use it for any website regardless of what it uses: pure Html/PHP, WordPress, Joomla, Drupal, or any other system 
+* You could use it for any website regardless of what it uses: pure HTML/PHP, WordPress, Joomla, Drupal, or any other system 
 ### PHP Version
-PHP 5.6, PHP 7.0, PHP 7.1, PHP 7.2, PHP 7.3, PHP 7.4 or PHP 8.0
+PHP 5.6,  PHP 7.0, PHP 7.1, PHP 7.2, PHP 7.3, PHP 7.4, PHP 8.0, PHP 8.1 or PHP 8.2
 ### Keywords
-HTML, PHP, web, web-hosting, website, script, code, contact us
+HTML, PHP, web, web hosting, website, script, code, contact us
 
 Background
 ----------
-Lots of contact us scripts are available over the internet. Other
+Lots of Contact Us scripts are available over the Internet. Other
 scripts need modification of the PHP file before use while this script
 will run directly out of the box. This script is very useful to those
-who do not know PHP and to the beginners of PHP.
+who do not know PHP and to beginners of PHP.
 
 Using the Code
 --------------
@@ -39,10 +39,10 @@ Using the Code
 * That is all
 * The contact-us URL is like example.com/contact-us replace example.com with your domain
 ### Modifying contact-us form design
-* You could modify the contact us page design as you want,
+* You could modify the Contact Us page design as you want,
 * Add or omit fields as needed
-* Use from_email, from_name, subject, message and captcha as fields names
-* Put your own Ads or make your form free of ads
+* Use from_email, from_name, subject, message, and captcha as field names
+* Put your Ads or make your form free of ads
 * You are free to put a link to us or not. 
 ## About the contact-us code
 ### From Action
@@ -50,22 +50,22 @@ Using the Code
 <form action="send.php" method="POST">
 ```
 ### Fields Names
-Use `from_email`, `from_name`, `subject`, `message` and `captcha` as
+Use `from_email`, `from_name`, `subject`, `message`, and `captcha` as
 main fields' names in your form.
 ### Captcha
-If you don’t wish to use captcha, then change the 1st line of the ‘config.php’ code to be:
+If you don’t wish to use a captcha, then change the 1st line of the ‘config.php’ code to be as follows:
 ```php
 $captcha = false;
 ```
-If you wish to use captcha, then no change is needed and the 1st line of the ‘config.php’ code will be:
+If you wish to use a captcha, then no change is needed and the 1st line of the ‘config.php’ code will be:
 ```php
 $captcha = true;
 ```
-If you need to modify the form; please note that we use captcha, include the following in your form:
+If you need to modify the form; please note that we use a captcha, include the following in your form:
 ```html
 <img src="captcha_code_file.php?rand=<?php echo rand(); 
 ?>" id='captchaimg' ><br>
-Enter the code above here : <input id="captcha" 
+Enter the code above here: <input id="captcha" 
 name="captcha" type="text"><br>
 ```
 ### Thank you URL
@@ -83,7 +83,7 @@ What Does This Script Do?
     }
     ```
 *   Validate user email and user name to prevent injecting the wrong
-    command in the header parameter of the mail function:
+    command in the header parameter of the mail() function:
 
     ```php
     if(!$from_email) $from_email = "web_page@$domain";
@@ -92,13 +92,13 @@ What Does This Script Do?
                     $from_email = "web_page@$domain";
     }
     ```
-*   Validate subject and encode it if needed to prevent send failure:
+*   Validate the subject and encode it if needed to prevent send failure:
     ```php
     if ($subject && !preg_match('/^[A-Za-z ]+$/',$subject)){
                     $subject = "=?UTF-8?B?".base64_encode($subject)."?=";
     }
     ```
-*   Store captcha in session and compare it with variable
+*   Store the captcha in session and compare it with the variable
 *   Seek all posted variables
     ```php
     foreach ($_POST as $key => $value) {
