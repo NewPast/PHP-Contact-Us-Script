@@ -1,5 +1,7 @@
-This PHP script is used to send contact-us form data to the webmaster, It is
-simple and runs without modification
+PHP contact-us script runs without modification. It detects the domain and emails all data of the contact-us form.
+This PHP script is used to send contact-us form data to the webmaster, It is simple and runs without modification.
+
+Run out-of-box PHP contact-us script, it does not need modification, it will detect the domain and send an email containing the contact message to info@exmple.com whatever fields are in your form; it will detect them and send the form data with email.
 
 PHP Contact Us Script Links and Downloads
 -------------------------------
@@ -8,12 +10,15 @@ PHP Contact Us Script Links and Downloads
 ### ♦ [PHP Contact Us Script on CodeProject](https://www.codeproject.com/KB/PHP/1139299.aspx)
 ### ♦ [GitHub Link](https://github.com/NewPast/PHP-Contact-Us-Script)
 
+What is New in PHP Contact Us Script
+------------------------------------
+* User must enter data in the name field, email, subject, and message before submitting.
+* The new version contains more user input filtering. So it keeps the script safe. We sanitize each input key and value using the function <code>htmlspecialchars()</code> and the filter  <code>FILTER_SANITIZE_STRING</code>. And It strip any HTML code or invalid characters.
+
 Introduction
 ------------
-Run out-of-box PHP contact-us script, it does not need modification, it
-will detect the domain and send an email containing the contact message
-to info@exmple.com whatever fields are in your form; it will detect them
-and send the form data by email.
+Run out-of-box PHP contact-us script, it does not need modification, it will detect the domain and send an email containing the contact message
+to info@exmple.com whatever fields are in your form; it will detect them and send the form data by email.
 
 System requirements
 -------------------
@@ -26,10 +31,8 @@ HTML, PHP, web, web hosting, website, script, code, contact us
 
 Background
 ----------
-Lots of Contact Us scripts are available over the Internet. Other
-scripts need modification of the PHP file before use while this script
-will run directly out of the box. This script is very useful to those
-who do not know PHP and to beginners of PHP.
+Lots of Contact Us scripts are available over the Internet. Other scripts need modification of the PHP file before use while this script
+will run directly out of the box. This script is very useful to those who do not know PHP and to beginners of PHP.
 
 Using the Code
 --------------
