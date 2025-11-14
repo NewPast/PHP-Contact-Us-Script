@@ -30,10 +30,10 @@ function np_filter_input( string $key ) {
 }
 //#####################################
 $domain = '';
-@ $domain = str_replace( 'www.', '', $_SERVER[ 'HTTP_HOST' ] );
+@ $domain = str_replace( 'www.', '', $_SERVER[ 'HTTP_HOST' ] ?? '');
 if ( !$domain ) {
     $domain
-        = str_replace( 'www.', '', $_SERVER[ 'SERVER_NAME' ] );
+        = str_replace( 'www.', '', $_SERVER[ 'SERVER_NAME' ] ?? '' );
 }
 if ( !$domain )die( 'Can not find domains' );
 
@@ -59,14 +59,14 @@ $bcc = '';
 
 //Checking the referrer page and stop the script if it called directly
 $REFERER = '';
-@ $REFERER = $_SERVER[ 'HTTP_REFERER' ];
+@ $REFERER = $_SERVER[ 'HTTP_REFERER' ] ?? '';
 if ( !preg_match( "@^https?:\/\/(www\.)?$domain\/@", $REFERER ) ) {
     die( "This page can't be call directly" );
 }
 if ( !$from_email && !$from_name && !$subject && !$message ) {
     die( "This page can't be call directly" );
 }
-$ip = isset( $_SERVER[ 'REMOTE_ADDR' ] ) ? $_SERVER[ 'REMOTE_ADDR' ] : '';
+$ip = $_SERVER[ 'REMOTE_ADDR' ] ?? '';
 $Err = '';
 
 //Validate user email and user name to prevent injecting wrong command in 
@@ -88,7 +88,7 @@ if ( $bcc && !filter_var( $bcc, FILTER_VALIDATE_EMAIL ) ) {
 
 if ( $captcha ) {
 
-    if ( empty( $_SESSION[ 'captcha' ] ) || strcasecmp( $_SESSION[ 'captcha' ], $_POST[ 'captcha' ] ) != 0 ) {
+    if ( empty( $_SESSION[ 'captcha' ] ?? '' ) || strcasecmp( $_SESSION[ 'captcha' ] ?? '', $_POST[ 'captcha' ] ?? '' ) != 0 ) {
         //Note: the captcha code is compared case insensitively.
         //if you want case sensitive match, update the check above to
         // strcmp()
