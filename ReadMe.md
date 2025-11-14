@@ -25,7 +25,7 @@ System requirements
 * A website with hosting support PHP; Almost all hosts do support it.
 * You could use it for any website regardless of what it uses: pure HTML/PHP, WordPress, Joomla, Drupal, or any other system 
 ### PHP Version
-PHP 5.6,  PHP 7.0, PHP 7.1, PHP 7.2, PHP 7.3, PHP 7.4, PHP 8.0, PHP 8.1 or PHP 8.2
+PHP 5.6,  PHP 7.0, PHP 7.1, PHP 7.2, PHP 7.3, PHP 7.4, PHP 8.0, PHP 8.1, PHP 8.2 PHP 8.3 or  PHP 8.4
 ### Keywords
 HTML, PHP, web, web hosting, website, script, code, contact us
 
